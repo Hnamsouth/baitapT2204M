@@ -103,10 +103,27 @@ void SoHoanHao (int n){
         printf("n khong phai so hoan hao");
     }
 }
+void SoHH (int n){
+    int TongUoc=0,i=n;
+    while (1<i){
+        
+        if(n%(i-1)==0){
+            TongUoc+=i-1;
+        }
+        i--;
+    }
+    printf("%d\n",TongUoc);
+    if(TongUoc==n){
+        printf("n la so hoan hao");
+    }else{
+        printf("n khong phai so hoan hao");
+    }
+}
 int main(){
     int n;
+    printf("nhap so nguyen n: ");
     scanf("%d",&n);
-    SoHoanHao(n);
+    
     /*
     // B1;
     solenhohonN(n);
@@ -116,10 +133,13 @@ int main(){
     SoNguyenTo(n);
     // B4:
     SoDaoNguoc(n);
+    // B5:
+    SoHoanHao(n);
+    SoHH(n);
     // B6:
     printf("tong cua day so S = %d",Tong1denN(n));
-    // B7:
-    S1chiaN(n);*/
+    // B7:*/
+    S1chiaN(n);
 
     return 0;
 }

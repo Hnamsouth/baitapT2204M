@@ -52,10 +52,10 @@ void S1chiaN(int n){
     printf("%.2f",tong);
 }
     /*3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
-    // số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
-     B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
-        B2: tạo biến số thực để so sánh , nếu B1 tìm ra số chia hết thì ko phải là so nguyen tố
-        đếm số lượng ước của số đó . nếu =2 thì là số nguyên tố
+    số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
+    B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
+    B2: tạo biến số thực để so sánh , nếu B1 tìm ra số chia hết thì ko phải là so nguyen tố
+    đếm số lượng ước của số đó . nếu =2 thì là số nguyên tố
     */
 void SoNguyenTo(int n){
     int uoc=0;
@@ -70,9 +70,9 @@ void SoNguyenTo(int n){
         printf("n khong phai so nguyen to");
     
 }
-    // 4. Nhập 1 số nguyên n, tìm số đảo ngược của n. vd. n=123 ~ n=321
-            // vd : 1234/10 dư 4 còn 123 / 10 dư 3 còn 12 /10 dư 2 còn 1
-            // lấy số dư nhân 10^3 , 10^2, 10^1 , 10^0
+    /*  4. Nhập 1 số nguyên n, tìm số đảo ngược của n. vd. n=123 ~ n=321
+        vd : 1234/10 dư 4 còn 123 / 10 dư 3 còn 12 /10 dư 2 còn 1
+        lấy số dư nhân 10^3 , 10^2, 10^1 , 10^0*/
 void SoDaoNguoc (int n){
     int f=0,p=0;
     for(int i=n;i>0;i=i/10){
@@ -85,9 +85,9 @@ void SoDaoNguoc (int n){
     printf("%d\n",f);
 }
     /* 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không
-      Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
-     vd; 6 =1+2+3
-     // B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo*/
+        Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
+        vd; 6 =1+2+3
+         B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo*/
 void SoHoanHao (int n){
     int TongUoc=0;
     for(int i=1; i<n; i++){

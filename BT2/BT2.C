@@ -51,15 +51,9 @@ void S1chiaN(int n){
     }
     printf("%.2f",tong);
 }
-<<<<<<< Updated upstream
     //3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
     // số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
     /* B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
-=======
-    /*3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
-    // số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
-     B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
->>>>>>> Stashed changes
         B2: tạo biến số thực để so sánh , nếu B1 tìm ra số chia hết thì ko phải là so nguyen tố
         đếm số lượng ước của số đó . nếu =2 thì là số nguyên tố
     */
@@ -74,7 +68,24 @@ void SoNguyenTo(int n){
         printf("n la so nguyen to");
     else
         printf("n khong phai so nguyen to");
-    
+}
+// tim so nguyen to tu 1-n
+void timSNT (int n){
+    int i,j;
+    if(n<2){
+        printf("khong co so nguyen to nho hon 2");
+    }
+    for(i=2;i<n;i++){
+        int demuoc=0;
+        for(j=1;i<=j;j++){
+            if(i%j==0){
+                demuoc++;
+            }
+        }
+        if(demuoc==2){
+            printf("%d",i);
+        }
+    }
 }
     // 4. Nhập 1 số nguyên n, tìm số đảo ngược của n. vd. n=123 ~ n=321
             // vd : 1234/10 dư 4 còn 123 / 10 dư 3 còn 12 /10 dư 2 còn 1
@@ -90,22 +101,15 @@ void SoDaoNguoc (int n){
     }
     printf("%d\n",f);
 }
-<<<<<<< Updated upstream
 
     // 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không
 
      /* Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
      vd; 6 =1+2+3*/
      // B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo
-=======
-    /* 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không
-      Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
-     vd; 6 =1+2+3
-     // B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo*/
->>>>>>> Stashed changes
 void SoHoanHao (int n){
     int TongUoc=0;
-    for(int i=1; i<n; i++){
+    for(int i=1; i<n/2; i++){
         if(n%i==0){
             TongUoc+=i;
         }
@@ -136,17 +140,14 @@ int main(){
     int n;
     printf("nhap so nguyen n: ");
     scanf("%d",&n);
-<<<<<<< Updated upstream
+    SoNguyenTo(n);
     
     /*
-=======
->>>>>>> Stashed changes
     // B1;
     solenhohonN(n);
     // B2:
     chiahetcho2_3(n);
     // B3:
-    SoNguyenTo(n);
     // B4:
     SoDaoNguoc(n);
     // B5:
@@ -154,12 +155,8 @@ int main(){
     SoHH(n);
     // B6:
     printf("tong cua day so S = %d",Tong1denN(n));
-<<<<<<< Updated upstream
-    // B7:*/
-=======
     // B7:
->>>>>>> Stashed changes
     S1chiaN(n);
-
+    */
     return 0;
 }

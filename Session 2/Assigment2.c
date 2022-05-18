@@ -15,23 +15,29 @@ void solenhohonN (int n){
 void chiahetcho2_3 (int n){
     //C1:
     while (n>0){
-        if(n%2==0 && n%3==0){
-            printf("%d\n",n);   
-        } 
         n--;
+        if(n%2==0 && n%3==0){
+            printf("%d\n",n);  
+            break; 
+        } 
+    
     }
     //C2:
-    /*for(int i=0;i<=n;i++){
+    /*
+    int solelonnhat =0
+    for(int i=0;i<=n;i++){
         if(i%2==0 && i%3==0){
             printf("%d\n",i);
+            solelonnhat=i;
         }
     }
     //C3:
     do{
+        n--;
         if(n%2==0 && n%3==0){
             printf("%d\n",n);
+            break;
         }
-        n--;
     }while(n>0);*/
 }
     // 6. Tính S =  1 + 2 + 3 +... + n (Với n được nhập từ bàn phím)
@@ -51,7 +57,7 @@ void S1chiaN(int n){
     }
     printf("%.2f",tong);
 }
-    /*3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
+    /* 3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
     số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
     B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
     B2: tạo biến số thực để so sánh , nếu B1 tìm ra số chia hết thì ko phải là so nguyen tố
@@ -122,11 +128,11 @@ int main(){
     printf("nhap so nguyen n: ");
     scanf("%d",&n);
     // B1;
-    solenhohonN(n);
+    // solenhohonN(n);
     // B2:
     chiahetcho2_3(n);
     // B3:
-    SoNguyenTo(n);
+   /* SoNguyenTo(n);
     // B4:
     SoDaoNguoc(n);
     // B5:
@@ -135,7 +141,7 @@ int main(){
     // B6:
     printf("tong cua day so S = %d",Tong1denN(n));
     // B7:
-    S1chiaN(n);
+    S1chiaN(n);*/
 
     return 0;
 }

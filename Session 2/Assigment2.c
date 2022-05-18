@@ -4,10 +4,10 @@
     //1. Nhập 1 số nguyên n, in ra các số lẻ nhỏ hơn n
 void solenhohonN (int n){
     while (n>0){
+        n--;
         if(n&1){
             printf("%d\n",n);   
         } 
-        n--;
     }
 }
     //2. Nhập 1 số nguyên n, tìm số lớn nhất nhỏ hơn n và chia hết cho cả 2 và 3

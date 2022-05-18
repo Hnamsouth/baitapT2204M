@@ -4,10 +4,10 @@
 //1. Nhập 1 số nguyên n, in ra các số lẻ nhỏ hơn n
 void solenhohonN (int n){
     while (n>0){
+        n--;
         if(n&1){
             printf("%d\n",n);   
         } 
-        n--;
     }
 }
 
@@ -15,10 +15,10 @@ void solenhohonN (int n){
 void chiahetcho2_3 (int n){
     //C1:
     while (n>0){
+        n--;
         if(n%2==0 && n%3==0){
             printf("%d\n",n);   
         } 
-        n--;
     }
     //C2:
     /*for(int i=0;i<=n;i++){

@@ -1,93 +1,64 @@
 #include<stdio.h>
 #include<math.h>
 
-    //1. Nhập 1 số nguyên n, in ra các số lẻ nhỏ hơn n
+//1. Nhập 1 số nguyên n, in ra các số lẻ nhỏ hơn n
 void solenhohonN (int n){
     while (n>0){
-        n--;
         if(n&1){
             printf("%d\n",n);   
         } 
+        n--;
     }
 }
-    //2. Nhập 1 số nguyên n, tìm số lớn nhất nhỏ hơn n và chia hết cho cả 2 và 3
+
+//2. Nhập 1 số nguyên n, tìm số lớn nhất nhỏ hơn n và chia hết cho cả 2 và 3
 void chiahetcho2_3 (int n){
     //C1:
     while (n>0){
-        n--;
         if(n%2==0 && n%3==0){
-<<<<<<< Updated upstream:Session 2/Assigment2.c
-            printf("%d\n",n);  
-            break; 
-        } 
-    
-=======
             printf("%d\n",n);   
-            break;
         } 
-        
->>>>>>> Stashed changes:BT2/BT2.C
+        n--;
     }
     //C2:
-    /*
-    int solelonnhat =0
-    for(int i=0;i<=n;i++){
+    /*for(int i=0;i<=n;i++){
         if(i%2==0 && i%3==0){
-            solelonnhat=i;
+            printf("%d\n",i);
         }
     }
-    printf("%d\n",solelonnhat);
     //C3:
     do{
-        n--;
         if(n%2==0 && n%3==0){
             printf("%d\n",n);
-            break;
         }
+        n--;
     }while(n>0);*/
 }
-    // 6. Tính S =  1 + 2 + 3 +... + n (Với n được nhập từ bàn phím)
+
+// 6. Tính S =  1 + 2 + 3 +... + n (Với n được nhập từ bàn phím)
 int Tong1denN (int n){
-    
     int tong=0;
-    
     for(int i=1;i<=n;i++){
         tong+=i;
     }
     return tong;
-    /*while(n>0){
-        tong+=n;
-        n--;
-    }
-    return tong;*/
-
 }
-    // 7. Tính S = 1 + 1/2 + 1/3 + ... + 1/n (Với n được nhập từ bàn phím)
+
+// 7. Tính S = 1 + 1/2 + 1/3 + ... + 1/n (Với n được nhập từ bàn phím)
 void S1chiaN(int n){
     float tong=0;
     for(int i=1;i<=n;i++){
         tong = tong + ((float)1/i);
     }
-    /*while(n>0){
-        tong+=(float)1/n;
-        n--;
-    }*/
     printf("%.2f",tong);
 }
-<<<<<<< Updated upstream:Session 2/Assigment2.c
-    /* 3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
+/*
+3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
     số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
     B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
     B2: tạo biến số thực để so sánh , nếu B1 tìm ra số chia hết thì ko phải là so nguyen tố
     đếm số lượng ước của số đó . nếu =2 thì là số nguyên tố
-=======
-    //3. Nhập 1 số nguyên n, kiểm tra xem n có phải số nguyên tố hay không
-    // số nuyên tố là số chia hết cho 1 và chia hết cho chính nó
-    /* B1: Tìm xem số đó có chia hết cho những số khác nhỏ hơn nó không
-        B2: tạo biến số thực để so sánh , nếu B1 tìm ra số chia hết thì ko phải là so nguyen tố
-        đếm số lượng ước của số đó . nếu =2 thì là số nguyên tố
->>>>>>> Stashed changes:BT2/BT2.C
-    */
+*/
 void SoNguyenTo(int n){
     int uoc=0;
     for(int i=1;i<=n;i++){
@@ -101,9 +72,10 @@ void SoNguyenTo(int n){
         printf("n khong phai so nguyen to");
     
 }
-    /*  4. Nhập 1 số nguyên n, tìm số đảo ngược của n. vd. n=123 ~ n=321
-        vd : 1234/10 dư 4 còn 123 / 10 dư 3 còn 12 /10 dư 2 còn 1
-        lấy số dư nhân 10^3 , 10^2, 10^1 , 10^0*/
+
+/*4.Nhập 1 số nguyên n, tìm số đảo ngược của n. vd. n=123 ~ n=321
+    vd : 1234/10 dư 4 còn 123 / 10 dư 3 còn 12 /10 dư 2 còn 1
+    lấy số dư nhân 10^3 , 10^2, 10^1 , 10^0*/
 void SoDaoNguoc (int n){
     int f=0,p=0;
     for(int i=n;i>0;i=i/10){
@@ -115,17 +87,11 @@ void SoDaoNguoc (int n){
     }
     printf("%d\n",f);
 }
-<<<<<<< Updated upstream:Session 2/Assigment2.c
-    /* 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không
-        Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
-        vd; 6 =1+2+3
-         B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo*/
-=======
-    // 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không
-     /* Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
-     vd; 6 =1+2+3*/
-     // B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo
->>>>>>> Stashed changes:BT2/BT2.C
+
+/* 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không
+    Số hoàn hảo là một số nguyên dương mà tổng các ước nguyên dương chính thức của nó bằng chính nó.
+    vd; 6 =1+2+3
+    B1:Tìm các ước của số đó B2: cộng lại nếu bằng chính số đó thì là số hoàn hảo*/
 void SoHoanHao (int n){
     int TongUoc=0;
     for(int i=1; i<n; i++){
@@ -159,32 +125,22 @@ int main(){
     int n;
     printf("nhap so nguyen n: ");
     scanf("%d",&n);
-<<<<<<< Updated upstream:Session 2/Assigment2.c
-=======
-    printf("tong cua day so S = %d\n",Tong1denN(n));
-    S1chiaN(n);
     
-    /*
->>>>>>> Stashed changes:BT2/BT2.C
     // B1;
-    // solenhohonN(n);
+    solenhohonN(n);
     // B2:
     chiahetcho2_3(n);
     // B3:
-   /* SoNguyenTo(n);
+    SoNguyenTo(n);
     // B4:
     SoDaoNguoc(n);
     // B5:
     SoHoanHao(n);
     SoHH(n);
     // B6:
-<<<<<<< Updated upstream:Session 2/Assigment2.c
     printf("tong cua day so S = %d",Tong1denN(n));
     // B7:
-    S1chiaN(n);*/
-=======
-    // B7:*/
->>>>>>> Stashed changes:BT2/BT2.C
+    S1chiaN(n);
 
     return 0;
 }

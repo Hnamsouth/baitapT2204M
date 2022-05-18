@@ -27,10 +27,10 @@ void chiahetcho2_3 (int n){
     int solelonnhat =0
     for(int i=0;i<=n;i++){
         if(i%2==0 && i%3==0){
-            printf("%d\n",i);
             solelonnhat=i;
         }
     }
+    printf("%d\n",solelonnhat);
     //C3:
     do{
         n--;

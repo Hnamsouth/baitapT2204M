@@ -14,6 +14,30 @@
 
 #include<stdio.h>
 #include <string.h>
+// S: 0 , 1, 1, 2, 3, 5, 8
+int fibonacci(int n)
+{   
+    int i=0,j=1;
+
+}
+
+int sum(int n){ 
+    // gía trị ban đầu cua sum(int n) = 0 vs bất kỳ số n
+    // l1 1+0 , 2+1, 3+3=6, 6+4=10; 10+5=15 , 15+6=21
+    if(n == 7){
+        return 0;   
+    } // điều kiện dừng (phần cơ sở)
+    
+    int x=0,x1=1,x3;
+    x=x1;
+    x1=x3;
+    // printf("%d ",*sum);
+    printf("%d ",x3);
+    
+    return  x3=x + x1;// l1 6 +5
+    // for(i=0;i<7;i++) --- 1+sum(n+1) == i++
+}
+
 void Fipolasi(int n){
     int x1=0,x2=1,x3=0,cd;
     /*for(int i=0;i<20;i++){
@@ -116,20 +140,6 @@ void displaysao4(){
     }
 }
 
-// S: 0 , 1, 1, 2, 3, 5, 8
-int fibonacci(int n)
-{   
-    int i=0,j=1;
-
-}
-int sum(int n){ // l1 1+0 , 2+1, 3+3=6, 6+4=10; 10+5=15 , 15+6=21
-    if(n == 7) // điều kiện dừng (phần cơ sở)
-      return 0;
-    // printf("%d ",*sum);
-    // printf("%d ",);
-    return n+sum(n+1);// l1 6 +5
-    
-}
 int main(){
     
     int n;

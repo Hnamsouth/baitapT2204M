@@ -28,18 +28,18 @@ void Fipolasi(int n){
     for(int i=1;i<20;i++){
         if(i&1){
             if(i==n+1){
-                printf("%d ",x1);
+                printf("\ngia tri tai vi tri %d la : %d \n",n,x1);
             }
-            // printf("%d ",x1);
+            printf("%d ",x1);
             x3=x1+x2;
             cd =x3;
             x3=x1;
             x1=cd;
         }else{
             if(i==n+1){
-                printf("%d ",x2);
+                printf("\ngia tri tai vi tri %d la : %d \n",n,x2);
             }
-            // printf("%d ",x2);
+            printf("%d ",x2);
             x3=x1+x2;
             cd=x3;
             x3=x2;
@@ -116,19 +116,19 @@ void displaysao4(){
     }
 }
 
-
+// S: 0 , 1, 1, 2, 3, 5, 8
 int fibonacci(int n)
-{
-    printf("%d ",n);
-    if ((n == 1) || (n == 2)){
-        return 1;
-    }
-    return fibonacci(n-1) + fibonacci(n-2);
+{   
+    int i=0,j=1;
+
 }
-int sum(int n){
-    if(n == 0) // điều kiện dừng (phần cơ sở)
+int sum(int n){ // l1 1+0 , 2+1, 3+3=6, 6+4=10; 10+5=15 , 15+6=21
+    if(n == 7) // điều kiện dừng (phần cơ sở)
       return 0;
-    return n + sum(n-1);
+    // printf("%d ",*sum);
+    // printf("%d ",);
+    return n+sum(n+1);// l1 6 +5
+    
 }
 int main(){
     
@@ -136,10 +136,11 @@ int main(){
     printf("nhap so nguyen n: ");
     printf("\n------------------\n");
     // printf("%d", fibonacci(10));
-    printf("Sum = %d", sum(6));
+    printf("%d", sum(1));
+    // sum(6);
 
     // scanf("%d",&n);
-    // Fipolasi(n);s
+    // Fipolasi(n);
 
     /*displaysao1();
     printf("\n------------------\n");

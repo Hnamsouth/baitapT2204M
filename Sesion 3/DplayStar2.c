@@ -7,8 +7,8 @@
 */
 #include<stdio.h>
 int main(){
-    int k=5,i;
-    for(i=0;i<k;i++){
+    int k=5;
+    for(int i=0;i<k;i++){
         if(i&1){
             k=4;
         }

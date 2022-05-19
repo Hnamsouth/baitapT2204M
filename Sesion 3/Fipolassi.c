@@ -7,10 +7,11 @@ int main(){
     scanf("%d",&n);
     int x1=0,x2=1,x3=0,cd;
 //C1:
-    
+    (n>0)? printf("gia tri tai vi tri %d trong day Filolassi la : ",n): printf("n phai >= 0") ;
     for(int i=0;i<=n;i++){
         if(i==n){
             printf("%d ",x3);
+            break;
         }
         x1=x2;
         x2=x3;

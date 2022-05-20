@@ -117,15 +117,16 @@ void timSNT (int n){
             // lấy số dư nhân 10^3 , 10^2, 10^1 , 10^0
 void SoDaoNguoc (int n){
 //C1:
-    /*int f=0,p=0;
-    for(int i=n;i>0;i=i/10){
+    int f=0,p=log10(n)+1; // log sẽ trả về 1 số thực. nhưng khi dùng vs kdl số nguyên thì chỉ lấy phần nguyên
+    /*for(int i=n;i>0;i=i/10){
         p++;  // p=4
-    }
-    for(p;p>0;p--){
+    }*/
+    // printf("%d",p);
+    for(;p>0;p--){
         f= f +((n%10) * pow(10,(p-1))); // 1234  4*10^3=400 ll 3*10^2 
         n/=10;
     }
-    printf("%d\n",f);*/
+    printf("%d\n",f);
 //C2: dung voi cac so duong
     /*int sdn=0;
     int i=1;
@@ -136,12 +137,12 @@ void SoDaoNguoc (int n){
     }
     printf("%d",sdn);*/
 //C3: dung voi ca duong va am
-    int sdn=0;
+    /*int sdn=0;
     for(;n!=0;n=n/10){
         // int sd = n%10;
         sdn=sdn*10 +(n%10);
     }
-    printf("%d",sdn);
+    printf("%d",sdn);*/
 }
 
     // 5.  Nhập 1 số nguyên n, kiểm tra xem n có phải số hoàn hảo hay không

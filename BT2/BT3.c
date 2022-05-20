@@ -15,10 +15,20 @@
 #include<stdio.h>
 #include <string.h>
 // S: 0 , 1, 1, 2, 3, 5, 8
-int fibonacci(int n)
-{   
-    int i=0,j=1;
-
+int tinhFibonaci(int n)//Hàm tính Fibonaci bằng đệ quy: độ phức tạp On= n^2
+{
+    if(n==0) return 0;
+    if(n<=2) return 1; //Trường hợp suy biến
+    return tinhFibonaci(n-1)+tinhFibonaci(n-2); //Đệ quy gọi lại 2 hàm con để thực hiện tính toán
+}
+int QHD(int n)//Hàm quy hoạch động: độ phức tạp On = n
+{
+    int a[10+1];
+    a[0]=0; a[1]=1; a[2]=1;
+    for(int i=3;i<=n;i++){
+        a[i]=a[i-1]+a[i-2];// công thức truy hồi quy hoạch động 
+    }
+    return a[n];//Trả về kết quả cho hàm quy hoạch
 }
 
 int sum(int n){ 
@@ -38,7 +48,7 @@ int sum(int n){
     // for(i=0;i<7;i++) --- 1+sum(n+1) == i++
 }
 
-void Fipolasi(int n){
+void Fipolasi(int n){ // độ phức tạp On = n
     int x1=0,x2=1,x3=0,cd;
     /*for(int i=0;i<20;i++){
         if(i==n){
@@ -49,21 +59,21 @@ void Fipolasi(int n){
         x3=x1+x2;
         
     }*/
-    for(int i=1;i<20;i++){
+    for(int i=1;i<=n;i++){
         if(i&1){
-            if(i==n+1){
+            if(i==n){
                 printf("\ngia tri tai vi tri %d la : %d \n",n,x1);
             }
-            printf("%d ",x1);
+            // printf("%d ",x1);
             x3=x1+x2;
             cd =x3;
             x3=x1;
             x1=cd;
         }else{
-            if(i==n+1){
+            if(i==n){
                 printf("\ngia tri tai vi tri %d la : %d \n",n,x2);
             }
-            printf("%d ",x2);
+            // printf("%d ",x2);
             x3=x1+x2;
             cd=x3;
             x3=x2;
@@ -128,8 +138,8 @@ void displaysao3(){
         ***** ***** ***** ***** *****   
 */
 void displaysao4(){
-    int k=5;
-    for(int i=1;i<=k;i++){
+    // int k=5;
+    for(int i=1;i<=5;i++){
         for(int j=0;j<i;j++){
             for(int n=0;n<i;n++){
                 printf("*");
@@ -146,11 +156,11 @@ int main(){
     printf("nhap so nguyen n: ");
     printf("\n------------------\n");
     // printf("%d", fibonacci(10));
-    printf("%d", sum(1));
+    // printf("%d", sum(1));
     // sum(6);
 
-    // scanf("%d",&n);
-    // Fipolasi(n);
+    scanf("%d",&n);
+    Fipolasi(n+1);
 
     /*displaysao1();
     printf("\n------------------\n");

@@ -50,16 +50,24 @@ int sum(int n){
 
 void Fipolasi(int n){ // độ phức tạp On = n
     int x1=0,x2=1,x3=0,cd;
-    /*for(int i=0;i<20;i++){
+    if(n<0){
+        printf("nhap n lon hon 0");
+    }else if(n==0){
+        printf("so can tim la 0");
+    }else if(n==1||n==2){
+        printf("so can tim la 1");
+    }else{
+        
+        for(int i=0;i<20;i++){
         if(i==n){
-            printf("%d ",x1);
+            printf("%d ",x2);
         }
         x1=x2;
         x2=x3;
         x3=x1+x2;
-        
-    }*/
-    for(int i=1;i<=n;i++){
+        }
+    }
+    /*for(int i=1;i<=n;i++){
         if(i&1){
             if(i==n){
                 printf("\ngia tri tai vi tri %d la : %d \n",n,x1);
@@ -79,7 +87,7 @@ void Fipolasi(int n){ // độ phức tạp On = n
             x3=x2;
             x2=cd;
         }
-    }
+    }*/
 }
 /* 1:
     * * * * *
@@ -131,7 +139,7 @@ void displaysao3(){
     }
 }
 /*  4:
-        * 
+        *  
         ** **
         *** *** ***
         **** **** **** ****
@@ -139,10 +147,10 @@ void displaysao3(){
 */
 void displaysao4(){
     // int k=5;
-    for(int i=1;i<=5;i++){
-        for(int j=0;j<i;j++){
-            for(int n=0;n<i;n++){
-                printf("*");
+    for(int i=1;i<=5;i++){  // i cot doc : i=1 -> j=1 -> n =1
+        for(int j=0;j<i;j++){ //   , i=2-> j=2 -> n=2
+            for(int n=0;n<i;n++){ // 
+                printf("*"); // cot ngang: 
             }
             printf(" ");
         }
@@ -160,7 +168,7 @@ int main(){
     // sum(6);
 
     scanf("%d",&n);
-    Fipolasi(n+1);
+    Fipolasi(n);
 
     /*displaysao1();
     printf("\n------------------\n");

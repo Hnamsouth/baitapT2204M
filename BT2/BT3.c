@@ -166,9 +166,10 @@ int main(){
     // printf("%d", fibonacci(10));
     // printf("%d", sum(1));
     // sum(6);
-
     scanf("%d",&n);
-    Fipolasi(n);
+    printf("%d",tinhFibonaci(n-1));
+    
+    // Fipolasi(n);
 
     /*displaysao1();
     printf("\n------------------\n");

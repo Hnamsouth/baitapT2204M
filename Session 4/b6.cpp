@@ -27,11 +27,13 @@ int main(){
                 j=0;
             }
         }
-    }
+    }   
     if(slslt[0] > slslt[1]){
         cout<<"chuoi co so duong lien tiep nhieu nhat la: "<< slslt[0];
-    }else{
+    }else if(slslt[0] < slslt[1]){
         cout<<"chuoi co so duong lien tiep nhieu nhat la: "<< slslt[1];
+    }else{
+        cout<<"chuoi ko co so duong lien tiep";
     }
 
     return 0;

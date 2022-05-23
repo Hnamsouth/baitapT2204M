@@ -6,18 +6,14 @@ int main(){
     int p;
     cout<< " nhap so luong phan tu trong mang: "<<endl;
     cin >>p;
-//
     int *n;
     n=(int*)malloc(p*sizeof(int));
-    for(int i=0;i<p;i++){
-        cin>>n[i];
-    }
-//
     int tong[2]={0,0};
     int j=0;
     for(int i=0;i<p;i++){
+        cin>>n[i];
         if(n[i]>0){
-            tong[j]+=n[i];         
+            tong[j]+=n[i];          // t[1]  -- t[2]  
         }else{
             if(tong[0]>tong[1]){
                 tong[1]=0;
@@ -32,6 +28,8 @@ int main(){
         cout<<" chuoi duong co tong lon nhat la: " <<tong[0];
     }else if(tong[0]<tong[1]){
         cout<<" chuoi duong co tong lon nhat la: " << tong[1];
+    }else{
+        cout<<"trong mang khong co so duong";
     }
 
     return 0;

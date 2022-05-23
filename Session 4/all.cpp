@@ -5,7 +5,7 @@ void TBCsl (int *n,int p){
     int tong=0,dem=0;
     for(int i=0;i<p;i++){
         
-        if(n[i]%2==1){
+        if(n[i]%2==1||n[i]&1==-1){
             tong+=n[i];
             dem++;
         }
@@ -21,7 +21,7 @@ void TBCsl (int *n,int p){
 void SLoC (int *n,int p){
     int tong=0,dem=0;
     for(int i=0;i<p;i++){
-        if(i%2==0 && n[i]%2==1){
+        if(i%2==0 && n[i]%2==1||n[i]&1==-1){
             tong+=n[i];
             dem++;
         }
@@ -53,7 +53,7 @@ void Xarr(int *n,int p){
 void SLcc(int *n,int p){
     int bd=0,slcc;;
     for(int j=p-1;j>=0;j--){
-        if(n[j]&1==1){
+        if(n[j]&1==1||n[j]&1==-1){
             slcc=n[j];
             break;
         }else{
@@ -160,6 +160,8 @@ void CDt(int *n,int p){
         cout<<" chuoi duong co tong lon nhat la: " <<tong[0];
     }else if(tong[0]<tong[1]){
         cout<<" chuoi duong co tong lon nhat la: " << tong[1];
+    }else{
+        cout<<"trong mang khong co so duong";
     }
 }
 

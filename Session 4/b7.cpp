@@ -13,11 +13,11 @@ int main(){
     for(int i=0;i<p;i++){
         cin>>n[i];
         if(n[i]>0){
-            tong[j]+=n[i];          // t[1]  -- t[2]  
+            tong[j]+=n[i];        
         }else{
             if(tong[0]>tong[1]){
-                tong[1]=0;
-                j=1;
+                tong[1]=0;          // rs tong nho 
+                j=1;                // va chuyen vtri tong dang cong sang tong nho
             }else if(tong[0]<tong[1]){
                 tong[0]=0;
                 j=0;

@@ -19,6 +19,9 @@ int main(){
             snn=n[i];
             bd++;
         }
+        if(snn>0){
+            bd++;
+        }
     }
     if(bd==0){
         cout<<"mang khong co so duong"<<endl;

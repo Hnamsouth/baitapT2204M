@@ -15,7 +15,7 @@ int main()
     for(int i=0;i<n;i++){
         cin>>ar[i];
         }
-    int h=(abs(ar[0]-x));
+    int h=(abs(ar[0]-x));// tri tuyet doi tu ar[o] den x
     int k;
     int vtri1=0,vitri2=0;
     

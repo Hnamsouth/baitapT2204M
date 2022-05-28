@@ -9,10 +9,10 @@ int main(){
     cin>>n;
     for(int i=0;i<n;i++){
         cin>>ar[i];
-        
+        // neu so thap hon thi nhap lai
         if(i>=1){
             // vd: 2 1
-            int j=i;
+            int j=i; 
             int bk=ar[i]; // bk = 1
             while((j>0)&& (bk<ar[j-1])){    // neu so sau nho hon so truoc
                 ar[j]=ar[j-1];              // chuyen vtri so sau den vtri so truoc

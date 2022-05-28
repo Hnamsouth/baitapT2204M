@@ -92,23 +92,70 @@ int uclnArray(int n,int ar[]){
 
 }
 //4. Hãy viết hàm tìm bội chung nhỏ nhất của tất cả các phần tử trong mảng
+int timboi(int n,int ar[],int max){
+    int bcln;
+    int i=max;
+    for(i; ;i++){
+        bool k=true;
+        for(int j=0;j<n;j++){
+            if(ar[j]==0){
+                return 0;
+            }else{
+                if(i%ar[j]!=0){
+                    k=false;
+                    break;
+                }
+            }
+        }
+        if(k){
+            bcln=i; 
+            break;
+        }
+    }
+    return bcln;
+}
 
+int ttd(int n,int ar[]){
+    int max=abs(ar[0]);
+    for(int i=1;i<n;i++){
+        if(abs(ar[i])>max){
+            max=abs(ar[i]);
+        }
+    }
+    return max;
+}
+
+int bcnn(int n, int ar[]){
+    if(ttd(n,ar)==0){
+        return 0;
+    }else{
+        return timboi(n,ar,ttd(n,ar));
+    }
+}
 //di tu so lon nhat den vo cung khi nào gap so ma chia het tat ca cac so trong mang thi break
 int main(){
     // int a=5,b=3;
     // cout<<tinhsomu(a,b);
-    int n=10;
-    int ar[10]={1,2,3,4,0,6,7,8,0,10};
+    int n=5;
+    int ar[5]={2,2,5,-7,3};
     // int ar[10]={0,0,0,0,0,0,0,0,0,0};
     // sntMin(n,ar);
     // cout<<sntMin(n,ar); 
     // int minarray=min(ar,n);
     // int k=abs(n);
+/*
     if(uclnArray(n,ar)==0){
         cout<<"mang ko co uoc chung";
     }else{
         cout<<"uoc chung lon nhat cua mang la "<<uclnArray(n,ar);
     }
+*/
+   cout<<bcnn(n,ar);
+    // if(bcnn(n,ar)==0){
+    //     cout<<"mang ko co boi chung";
+    // }else{
+    //     cout<<"uoc chung nho nhat cua mang la "<<bcnn(n,ar);
+    // }
     
     return 0;
 }

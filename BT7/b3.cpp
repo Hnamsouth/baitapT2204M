@@ -13,21 +13,25 @@ int min(int n,int ar[]){
     return Min;
     // neu hàm min =0 thì mảng ko có ước chung.
 }
-// int ttd(int min){
-//     return abs(min);
-// }
+int ttd(int n,int ar[]){
+    int ttdmin=abs(ar[0]);
+    for(int i=1;i<n;i++){
+        if(ar[i]<ttdmin){
+            ttdmin=ar[i];
+        }
+    }
+    return ttdmin;
+}
 int kiemtrauoc(int n,int ar[],int min){
     int ucln;
-    bool k=true;
     for(int j=1;j<=abs(min);j++){
+        bool k=true;
         for(int i=0;i<n;i++){
-            if(ar[i]==0){
-                continue;
-            }else{
-                if(ar[i]%j!=0||-ar[i]%j!=0){
+            
+                if(ar[i]%j!=0){
                     k=false;
                 }
-            }
+            
         }
         if(k){
             ucln=j;
@@ -38,12 +42,14 @@ int kiemtrauoc(int n,int ar[],int min){
 }
 int uclnArray(int n,int ar[]){
     int ucMax,gtrmin;
-    int minar=*std::min_element(ar,ar+n);
+    int minar=ttd(n,ar);
     // cout<<minar<<endl;
     // cout<<ttd(minar);
     if(minar==0){
         gtrmin=min(n,ar);
         return kiemtrauoc(n,ar,gtrmin);
+    }else if(minar==1){
+        return minar;
     }else{
         return kiemtrauoc(n,ar,minar);
     }
@@ -65,8 +71,8 @@ int main(){
     // int a=5,b=3;
     // cout<<tinhsomu(a,b);
     int n=10;
-    int ar[10]={0,5,-6,12,8,4,-10,200,20,13};
-    // int ar[10]={0,0,0,0,0,0,0,0,0,0};
+    // int ar[10]={0,-24,-6,12,8,4,-10,200,8,18};
+    int ar[10]={0,0,0,0,0,0,0,0,0,0};
     // sntMin(n,ar);
     // cout<<sntMin(n,ar); 
     // int minarray=min(ar,n);

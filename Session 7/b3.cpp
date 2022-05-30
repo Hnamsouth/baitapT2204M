@@ -17,13 +17,9 @@ int kiemtrauoc(int n,int ar[],int min){
     for(int j=abs(min);j>0;j--){
         bool k=true;
         for(int i=0;i<n;i++){
-            if(ar[i]==0){
-                continue;
-            }else{
                 if(ar[i]%j!=0){
                     k=false;
                 }
-            }
         }
         if(k){
             ucln=j;
@@ -38,6 +34,8 @@ int uclnArray(int n,int ar[]){
     if(minar==0){
         gtrmin=min(n,ar);
         return kiemtrauoc(n,ar,gtrmin);
+    }else if(minar==1){
+        return minar;
     }else{
         return kiemtrauoc(n,ar,minar);
     }

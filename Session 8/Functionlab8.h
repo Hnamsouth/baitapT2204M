@@ -31,7 +31,7 @@ int Cdungtruoc(char a[],char b[]){ // a[]=true  , b=false
                 break;
             }else if(a[j]==b[j]){
                 continue;
-            }else if(a[j]<b[j]){
+            }else if(a[j]<b[j]){    
                 k=0;
                 break;
             }
@@ -90,6 +90,7 @@ void arraymax(char j[100][100],int vtri[10],int k,int bd){
         cout<<"chuoi thu "<<vtri[0]+1<<" trong mang la Chuoi co do dai lon nhat";
     }
 }
+
 //B6:
 void ArrayFirst(char a[100][100],int vtridau[10],int n,int bd){
     n=1,bd=0;
@@ -113,11 +114,7 @@ void ArrayFirst(char a[100][100],int vtridau[10],int n,int bd){
             }
         }
     }
-     inArray10(n,vtridau);
-    
-}
-void inArray10(int n,int vtridau[10]){
-     if(n==10){
+    if(n==10){
         cout<<"ko co chuoi nao dung dau ";
     }else if(n>1){
         cout<<"co "<<n<<" chuoi dung dau theo day alphabet la cac chuoi: ";
@@ -127,4 +124,6 @@ void inArray10(int n,int vtridau[10]){
     }else{
         cout<<"chuoi thu "<<vtridau[n-1]+1<<" la chuoi dung dau theo day alphabet ";
     }
+    
 }
+

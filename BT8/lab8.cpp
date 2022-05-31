@@ -10,11 +10,28 @@
 #include<iostream>
 #include <cstring>
 #include "Functionlab8.h"
+<<<<<<< Updated upstream
 using namespace std;
 
 
 
 
+=======
+#include <vector>
+
+using namespace std;
+
+
+
+std::vector<int> divisors(int n)
+{
+    std::vector<int> a;
+    for (int i = 1; i <= n; ++i)
+        if (n % i == 0)
+            a.push_back(i);
+    return a;
+}
+>>>>>>> Stashed changes
 
 int main(){
  /*   
@@ -80,6 +97,10 @@ int main(){
     // neu chuoi 1 ={a,b,c} & chuoi 2={a,b,c,d} thi chuoi 1 dung dau
     // gan a[0] la chuoi dung dau, so sanh a[0]vs cac chuoi con lai trong mang
     // chuoi nao < a[0] thi chuoi do dung dau
+<<<<<<< Updated upstream
+=======
+ /*   
+>>>>>>> Stashed changes
     char a[4][100];
     nhap10(a);
     int n=1;
@@ -117,6 +138,7 @@ int main(){
     }
     
 
+<<<<<<< Updated upstream
     // while(n>0){cout<<vtridau[n]<<" ";n--;}sada  xzv  as
 
 
@@ -124,3 +146,21 @@ int main(){
 
     return 0;
 }
+=======
+ */   // while(n>0){cout<<vtridau[n]<<" ";n--;}sada  xzv  as
+
+
+
+    auto a = divisors(10);
+    for (int x : a) 
+        std::cout << x << ' ';
+
+    //hoặc dài dòng hơn
+    // std::vector<int> a = divisors(10);
+    // for (int i = 0; i < a.size(); ++i)
+    //     std::cout << a[i] << ' ';
+
+
+    return 0;
+}
+>>>>>>> Stashed changes

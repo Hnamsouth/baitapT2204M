@@ -19,7 +19,30 @@
         "ios": "cpp",
         "iosfwd": "cpp",
         "iostream": "cpp",
+<<<<<<< Updated upstream
         "istream": "cpp",
+=======
+        "istream": "c",
+        "algorithm": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+>>>>>>> Stashed changes
         "iterator": "cpp",
         "limits": "cpp",
         "memory": "cpp",
@@ -32,6 +55,10 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
+<<<<<<< Updated upstream
+=======
+        "vector": "cpp",
+>>>>>>> Stashed changes
         "xfacet": "cpp",
         "xiosbase": "cpp",
         "xlocale": "cpp",
@@ -41,8 +68,12 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
+<<<<<<< Updated upstream
         "xutility": "cpp",
         "algorithm": "cpp",
         "BT2.C": "cpp"
+=======
+        "xutility": "cpp"
+>>>>>>> Stashed changes
     }
 }

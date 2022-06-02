@@ -62,7 +62,7 @@ int main(){
     }
 */
 //5: 5. Nhập vào 1 mảng 10 chuỗi, tìm chuỗi có độ dài lớn nhất
-/*
+
     char j[10][100];
     nhap10(j);
     if(CmaxOfArray(j)==0){
@@ -70,7 +70,7 @@ int main(){
     }else{
         cout<<"chuoi thu "<<CmaxOfArray(j)<<" trong mang la Chuoi co do dai lon nhat";
     }
-*/ 
+
 //6. Nhập vào 1 mảng 10 chuỗi, tìm chuỗi phải đứng đầu tiên theo dãy alphabet : gia trij trong alphabet nho hon se dung dau
 
     
@@ -119,7 +119,7 @@ int main(){
     */
 
     // while(n>0){cout<<vtridau[n]<<" ";n--;}sada  xzv  as
-    
+    /*
     char a[100];
     cin>>a;
     int n=strlen(a);
@@ -131,7 +131,7 @@ int main(){
     for(int j=0;j<n;j++){
         cout<<a[j];
     }
-
+*/
 
     return 0;
 }

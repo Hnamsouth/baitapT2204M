@@ -91,6 +91,3 @@ int bai6 (char a[10][100]){
     }
     return n;
 }
-int vitridd(int vtridau[]){
-    
-}

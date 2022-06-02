@@ -63,13 +63,59 @@ int main(){
 */
 //5: 5. Nhập vào 1 mảng 10 chuỗi, tìm chuỗi có độ dài lớn nhất
 
-    char j[10][100];
-    nhap10(j);
-    if(CmaxOfArray(j)==0){
-        cout<<"trong mang khong co chuoi ky tu ";
-    }else{
-        cout<<"chuoi thu "<<CmaxOfArray(j)<<" trong mang la Chuoi co do dai lon nhat";
+/*
+nhap chuoi 2 asd
+nhap chuoi 3 ad
+nhap chuoi 4 asc
+nhap chuoi 5 asa
+nhap chuoi 6 asda
+nhap chuoi 7 asa
+nhap chuoi 8 df
+nhap chuoi 9 d
+nhap chuoi 10 c */ 
+    char a[10][100];
+    int vtridau[10] ;
+    int bd,n;
+
+    nhap10(a);
+    // arraymax(j,vtri,k,n);
+    //b6:
+    // ArrayFirst(j,vtri,k,n);
+    n=1,bd=0;
+    vtridau[bd]=0;
+    for(int i=1;i<10;i++){
+        bool k=true;
+        for(int j=0;j<strlen(a[vtridau[bd]]);j++){
+            if(a[i][j]<a[vtridau[bd]][j]){
+                n=1,bd=0;
+                vtridau[bd]=i;
+                k=false;
+                break;
+            }else if(a[i][j]==a[vtridau[bd]][j]){
+                continue;
+            }if(a[i][j]>a[vtridau[bd]][j]){
+                break;
+            }
+        }
+
+        if(k){
+            if(strcmp(a[vtridau[bd]],a[i])==0){
+                n++,bd++;
+                vtridau[bd]=i;
+            }
+        }
     }
+    if(n==10){
+        cout<<"ko co chuoi nao dung dau ";
+    }else if(n>1){
+        cout<<"co "<<n<<" chuoi dung dau theo day alphabet la cac chuoi: ";
+        for(int i=0;i<n;i++){
+            cout<<vtridau[i]+1<<" ";
+        }
+    }else{
+        cout<<"chuoi thu "<<vtridau[n-1]+1<<" la chuoi dung dau theo day alphabet ";
+    }
+    
 
 //6. Nhập vào 1 mảng 10 chuỗi, tìm chuỗi phải đứng đầu tiên theo dãy alphabet : gia trij trong alphabet nho hon se dung dau
 

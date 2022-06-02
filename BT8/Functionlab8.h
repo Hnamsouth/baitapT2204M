@@ -31,7 +31,8 @@ bool Cdungtruoc(char a[],char b[]){ // a[]=true  , b=false
 
 //B3:
 void nhap10(char a[100][100]){
-    for(int i=0;i<4;i++){
+    for(int i=0;i<10;i++){
+        cout<<"nhap chuoi "<<i+1<<" ";
         cin>>a[i];
     }
 }
@@ -55,25 +56,38 @@ void Bai4(char a[]){
     }
 }
 //B5:
-int CmaxOfArray(char a[10][100]){
-    int Cmax=strlen(a[0]);
-    int k=0;
+void arraymax(char j[100][100],int vtri[10],int k,int bd){
+    k=0;bd=0;
+    vtri[k]=0;
+    int Cmax=strlen(j[0]);
     for(int i=1;i<10;i++){
-        if(strlen(a[i])>Cmax){
-            k=i;
+        if(strlen(j[i])>Cmax){
+            Cmax=strlen(j[i]);
+            vtri[k]=i;
+        }else if(strlen(j[i])==Cmax){
+            k++,bd++;
+            vtri[k]=i;
         }
     }
-    return k;
+    if(bd==9){
+        cout<<"trong mang khong co chuoi co do dai lon nhat ";
+    }else if(bd>0){
+        cout<<"trong mang co "<<bd+1<<" chuoi co do dai lon nhat la:";
+        for(int i=0;i<=bd;i++){cout<<vtri[i]+1<<" ";}
+    }
+    else{
+        cout<<"chuoi thu "<<vtri[0]+1<<" trong mang la Chuoi co do dai lon nhat";
+    }
 }
 //B6:
-int bai6 (char a[10][100]){
-    int n=1;
-    int bd=0;
-    int vtridau[10]={0};
-    for(int i=1;i<4;i++){
+void ArrayFirst(char a[100][100],int vtridau[10],int n,int bd){
+    n=1,bd=0;
+    vtridau[bd]=0;
+    for(int i=1;i<10;i++){
         bool k=true;
         for(int j=0;j<strlen(a[vtridau[bd]]);j++){
             if(a[i][j]<a[vtridau[bd]][j]){
+                n=1,bd=0;
                 vtridau[bd]=i;
                 k=false;
                 break;
@@ -83,11 +97,20 @@ int bai6 (char a[10][100]){
         }
         if(k){
             if(strcmp(a[vtridau[bd]],a[i])==0){
-                n++;
-                bd++;
+                n++,bd++;
                 vtridau[bd]=i;
             }
         }
     }
-    return n;
+    if(n==10){
+        cout<<"ko co chuoi nao dung dau ";
+    }else if(n>1){
+        cout<<"co "<<n<<" chuoi dung dau theo day alphabet la cac chuoi: ";
+        for(int i=0;i<n;i++){
+            cout<<vtridau[i]+1<<" ";
+        }
+    }else{
+        cout<<"chuoi thu "<<vtridau[n-1]+1<<" la chuoi dung dau theo day alphabet ";
+    }
+    
 }

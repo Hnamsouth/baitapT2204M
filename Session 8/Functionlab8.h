@@ -105,6 +105,8 @@ void ArrayFirst(char a[100][100],int vtridau[10],int n,int bd){
                 break;
             }else if(a[i][j]==a[vtridau[bd]][j]){
                 continue;
+            }if(a[i][j]>a[vtridau[bd]][j]){
+                break;
             }
         }
         if(k){

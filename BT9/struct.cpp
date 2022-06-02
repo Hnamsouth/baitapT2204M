@@ -15,9 +15,18 @@ struct hocsinh{
         
     }
 }hs,hs2;
+<<<<<<< Updated upstream
 typedef struct ten{
     int a;
 }snguoi1 ;
+=======
+
+typedef struct ten{
+    // 
+    int a;
+}snguoi1 ;
+
+>>>>>>> Stashed changes
 class hsinh{
     public:
         void display (int t[10], string name[10],float cc[10],int n){

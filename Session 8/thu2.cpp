@@ -13,7 +13,7 @@ int main(){
     int bd=100;
 	while(bd>0){
 		int a=n/bd;
-		if (a == 1){cout<<"một ";
+		if (a == 1){cout<<"one ";
 		}else if (a == 2){cout<<"two ";
 		}else if (a == 3){cout<<"three ";
 		}else if (a == 4){cout<<"four ";
@@ -22,14 +22,14 @@ int main(){
 		}else if (a == 7){cout<<"seven ";
 		}else if (a == 8){cout<<"eight ";
 		}else if (a == 9){cout<<"nine";
-		}
+		}else if(bd<=10){if (a == 0){cout<<"zero ";}}
 		n%=bd;
         bd/=10;
 	}
     // use loop (for)
     for(int i=100;i>0;i/=10){
         int a=n/i;
-        if (a == 1){cout<<"một ";
+        if (a == 1){cout<<"one ";
 		}else if (a == 2){cout<<"two ";
 		}else if (a == 3){cout<<"three ";
 		}else if (a == 4){cout<<"four ";
@@ -38,7 +38,7 @@ int main(){
 		}else if (a == 7){cout<<"seven ";
 		}else if (a == 8){cout<<"eight ";
 		}else if (a == 9){cout<<"nine";
-		}
+		}else if(i<=10){if (a == 0){cout<<"zero ";}}
         n%=i;
     }
     return 0;

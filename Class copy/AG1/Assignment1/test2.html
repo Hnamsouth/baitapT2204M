@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        .vehinh {
+            margin: 10px;
+            width: 300px;
+            height: 200px;
+            background-color: azure;
+            border-radius: 30px;
+            position: relative;
+        }
+        
+        .vehinh::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            /* hướng mũi tênn */
+            left: 50px;
+            /* dịch chuyển vị trí trái phải */
+            border-bottom: 10px solid azure;
+            /* chiều dài va hướng dấu mũi tên */
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vehinh"></div>
+</body>
+
+</html>

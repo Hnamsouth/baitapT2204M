@@ -1,0 +1,41 @@
+.body {
+  overflow-y: scroll;
+}
+.mb-3 {
+  font-size: 17px;
+  width: 270px;
+  margin-top: 10px;
+}
+.nhap-tt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login {
+  margin: auto;
+  width: 315px;
+  height: 396px;
+  border-radius: 10px;
+}
+.logoImage {
+  height: 106px;
+  margin: -28px;
+}
+.gop {
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.addacc .btn {
+  width: 60%;
+  background-color: #36a420;
+}
+.dropdown-item {
+  opacity: 0.8;
+}
+.dropdown-item:hover {
+  opacity: 1;
+}
+.dropdown-item:hover .w {
+  color: #1877f2;
+}

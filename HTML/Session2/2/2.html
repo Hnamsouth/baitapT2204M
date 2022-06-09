@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        img {
+            display: none;
+        }
+    </style>
+    <script>
+        var Ndate = new Date();
+        // lay ngay, thang, nam
+        var Nday = Ndate.getDate();
+        var Nmonth = Ndate.getMonth();
+        var Nyear = Ndate.getFullYear();
+        document.getElementById('clock').innerHTML = Nday + "/" + Nmonth + "/" + Nyear;
+    </script>
+</head>
+
+<body>
+    <div id="clock"></div>
+    <ion-icon name="time-outline"></ion-icon>
+    <!-- icon dong ho -->
+    <img src="https://hotro.tiki.vn/servlet/rtaImage?eid=ka05h000000vH9l&feoid=00N5Y00000TZwdJ&refid=0EM5Y000003UhFX" alt="">
+    <img src=" https://hotro.tiki.vn/servlet/rtaImage?eid=ka05h000000vH9l&feoid=00N5Y00000TZwdJ&refid=0EM5Y000003UhFc" alt="">
+    <img src="https://hotro.tiki.vn/servlet/rtaImage?eid=ka05h000000vH9l&feoid=00N5Y00000TZwdJ&refid=0EM5Y000003UhFh" alt="">
+    <img src="https://hotro.tiki.vn/servlet/rtaImage?eid=ka05h000000vH9l&feoid=00N5Y00000TZwdJ&refid=0EM5Y000003UhFr" alt="">
+    <img src="https://hotro.tiki.vn/servlet/rtaImage?eid=ka05h000000vH9l&feoid=00N5Y00000TZwdJ&refid=0EM5h000004Iltw" alt="">
+</body>
+
+</html>

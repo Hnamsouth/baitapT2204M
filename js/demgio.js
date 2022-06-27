@@ -25,7 +25,7 @@ document.getElementById('start').addEventListener("click", function() {
     }
 });
 
-
+//test
 function cd() {
     if (s == 00) {
         s = 60;

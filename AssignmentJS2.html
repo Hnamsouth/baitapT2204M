@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Ibs/bootstrap/css/bootstrap.css">
+    <style>
+        .weather .row div {
+            border-right: 1px solid rgb(107, 107, 107);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class=" container-md weather">
+        <div class=" row border p-3">
+            <div class="col-1 p-0">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" width="100%">
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center">
+                <p id="temp">34</p>
+
+            </div>
+            <div class="col-1 d-flex p-0">
+                <P style="letter-spacing: 5px;"><sup>o</sup><span class=" border-end">C</span></P>
+                <P style="letter-spacing: 2px; margin-left:5px;"><sup>o</sup>F</P>
+            </div>
+            <div class="col-4 padding-0 d-flex flex-column">
+                <SPAN id="rain">Precipitation:</SPAN>
+                <SPAN id="humidity">Humidity:</SPAN>
+                <SPAN id="wind">Wind:</SPAN>
+            </div>
+            <div class="col-4 text-sm-end d-flex flex-column">
+                <SPAN id="address">Cầu giấy, Hà Nội</SPAN>
+                <SPAN id="daytime">Tusday 11:00</SPAN>
+                <SPAN id="days">Monstly sunny</SPAN>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./jquery/jqUncompress.js"></script>
+<script type="text/javascript">
+    var weather = {
+        precipitation: 0,
+        humidity: 56,
+        wind: "8k/h"
+    }
+    var location = {
+        address: "Cầu giấy, Hà nội",
+        daytime: "Thứ Ba 11:00",
+
+    }
+
+    var rain = $("#rain");
+    var humidity = $("#humidity");
+    var wind = $("#wind");
+
+    var address = $("#address");
+    var daytime = $("#daytime");
+    var days = $("#days");
+</script>
+
+</html>

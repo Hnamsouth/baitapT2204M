@@ -127,7 +127,10 @@
     function thoitiet(city) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APP_ID}&lang=vi&units=metric`)
             //su dung method then(): method then se duoc chay khi co du lieu tu API tra ve
+            //.then(async function(res) { co the viet ngan gon giong ben duoi
             .then(async res => {
+                //const data = await res.text();
+                // chuyen doi du lieu thanh 1 mang
                 const data = await res.json();
                 console.log(data);
                 icon.html("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png' width:100%/>");

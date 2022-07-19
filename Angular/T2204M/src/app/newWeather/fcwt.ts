@@ -13,6 +13,7 @@ export class FCWT{
   ds:ForeCastWT|undefined;
   array:List[]|undefined;
   city:string="paris";
+  location:City|undefined;
   enter(event:KeyboardEventInit){
     if(event.key=="Enter"){
       this.onSubmit();
@@ -27,12 +28,18 @@ export class FCWT{
     params =  params.append('q',this.city);
     params =  params.append('appid','09a71427c59d38d6a34f89b47d75975c');
     params =  params.append('units','metric');
+    params =  params.append('lang','vi');
     this.http.get<ForeCastWT>(url,{params: params})
       .subscribe(value=>{
         this.array = value.list;
         this.ds=value;
-        // console.log(this.ct)
+        this.location=value.city;
+        console.log(this.location)
       });
+      setInterval(()=>{
+
+      },1000)
   }
+
 
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { ClassCPN } from './practiceclass/weather';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FCwComponent } from './forecastweather/FCweather';
-import { ftCPN } from './FARTHER/ft';
+import { FCWT } from './newWeather/fcwt';
+import { ChildFCWT } from './childNewWt/childFcwt';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClassCPN,
-    FCwComponent,
-    ftCPN
+    FCWT,
+    ChildFCWT
 
   ],
   imports: [

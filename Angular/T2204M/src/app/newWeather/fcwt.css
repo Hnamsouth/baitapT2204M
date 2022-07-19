@@ -1,0 +1,11 @@
+.col-2 {
+    padding: 10px !important;
+    margin-bottom: 25px !important;
+    margin-right: 25px !important;
+}
+
+.child {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white !important;
+}

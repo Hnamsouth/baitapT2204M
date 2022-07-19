@@ -12,3 +12,7 @@
     display: flex;
     align-items: center
 }
+
+.t-ct {
+    align-items: center !important;
+}

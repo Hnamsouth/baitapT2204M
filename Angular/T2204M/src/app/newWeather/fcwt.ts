@@ -2,7 +2,7 @@ import { HttpClient ,HttpParams} from "@angular/common/http";
 import { Component,OnInit } from "@angular/core";
 import { Params } from "@angular/router";
 import { AnyCatcher } from "rxjs/internal/AnyCatcher";
-import { ForeCastWT, List } from "../interface/FCwt";
+import { City, ForeCastWT, List } from "../interface/FCwt";
 
 @Component({
   selector:"fc-wt",
@@ -31,7 +31,8 @@ export class FCWT{
       .subscribe(value=>{
         this.array = value.list;
         this.ds=value;
-        console.log(this.ds)
+        // console.log(this.ct)
       });
   }
+
 }

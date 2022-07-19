@@ -1,0 +1,18 @@
+<h1>Thong tin thoi tiet</h1>
+<div>
+    <input #city placeholder="City name">
+    <button type="button" (click)="onSubmit(city.value)">changeTest1</button>
+</div>
+<!-- hoac dung -->
+<div>
+    <input type="text" placeholder="city name" [(ngModel)]="city2">
+    <button type="button" (click)="changecity()">changeTest2</button>
+</div>
+
+<!-- <button type="submit" (submit)="timkiem()">search</button> -->
+<div *ngIf="data">
+    <h1>Khu Vực:{{data.name}} - {{data.sys.country}}</h1>
+    <p>Nhiệt Độ: {{data.main.temp}}</p>
+    <p>Mây:{{data.clouds.all}}</p>
+    <p>{{data.weather[0].description}}</p>
+</div>

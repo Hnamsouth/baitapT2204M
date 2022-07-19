@@ -1,3 +1,14 @@
 .text {
-    font-weight: 700 !important;
+    font-weight: 600 !important;
+    font-size: 18px;
+}
+
+.temp {
+    font-size: 40px !important;
+    font-weight: 600 !important;
+}
+
+.nd {
+    display: flex;
+    align-items: center
 }

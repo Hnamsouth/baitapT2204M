@@ -19,6 +19,7 @@ export class ClassCPN{
     // this.onSubmit(this.city);
   }
 
+
   ngOnInit(){ // hàm này tự động chạy sau khi print html xong
     const url = 'https://api.openweathermap.org/data/2.5/forecast';
     let params = new HttpParams();

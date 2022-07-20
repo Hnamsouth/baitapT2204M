@@ -1,16 +1,12 @@
 import { HttpClient ,HttpParams} from "@angular/common/http";
 import { Component,OnInit } from "@angular/core";
-import { Params } from "@angular/router";
-import { AnyCatcher } from "rxjs/internal/AnyCatcher";
 import { City, ForeCastWT, List } from "../interface/FCwt";
-
 @Component({
   selector:"fc-wt",
   templateUrl:"./wt.html",
   styleUrls:["./fcwt.css"]
 })
 export class FCWT{
-  ds:ForeCastWT|undefined;
   array:List[]|undefined;
   city:string="paris";
   location:City|undefined;
@@ -32,14 +28,33 @@ export class FCWT{
     this.http.get<ForeCastWT>(url,{params: params})
       .subscribe(value=>{
         this.array = value.list;
-        this.ds=value;
         this.location=value.city;
-        console.log(this.location)
       });
-      setInterval(()=>{
-
-      },1000)
   }
-
-
 }
+
+/*
+myFunction(){
+  var Sbar = document.getElementById("searchbar");
+
+  console.log(Sbar?.offsetTop)
+  if(window.scrollY>=303){
+    console.log(window.scrollY);
+    Sbar?.classList.add("sticky");
+  }else{
+    Sbar?.classList.remove("sticky");
+  }
+}*/
+
+
+ // var Sbar = document.getElementById("searchbar");
+    // var sticky = Sbar?.offsetTop;
+    // console.log(window.scrollY)
+    // this.myFunction() {
+    //     if (window.scrollY >= 400) {
+    //         Sbar?.classList.add("sticky");
+    //         console.log(window.scrollY)
+    //     } else {
+    //         Sbar?.classList.remove("sticky");
+    //     }
+    // }

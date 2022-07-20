@@ -1,4 +1,4 @@
-<div class=" row">
+<div class="row" id="searchbar">
     <input class="col-10 inp-city" [(ngModel)]="city" placeholder="City name" (keydown)="enter($event)">
     <button class=" col-4 btn-search" type="button" (click)="onSubmit()">Search</button>
     <h2 class="location">{{location?.name}}, {{location?.country}}</h2>

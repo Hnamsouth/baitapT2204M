@@ -1,6 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { ForeCastWT, List } from "../interface/FCwt";
-import { HttpClient ,HttpParams} from "@angular/common/http";
+import { List } from "../interface/FCwt";
 
 @Component({
   selector:"child-fcwt",

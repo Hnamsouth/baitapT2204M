@@ -1,12 +1,14 @@
 import { HttpClient ,HttpParams} from "@angular/common/http";
 import { Component,OnInit } from "@angular/core";
 import { City, ForeCastWT, List } from "../interface/FCwt";
+import { IcurrentWeather } from "../interface/weatherinterface";
 @Component({
   selector:"fc-wt",
   templateUrl:"./wt.html",
   styleUrls:["./fcwt.css"]
 })
 export class FCWT{
+  currentWT:IcurrentWeather|undefined; // thoi tiet hien tai
   array:List[]|undefined;
   city:string="paris";
   location:City|undefined;
@@ -30,6 +32,12 @@ export class FCWT{
         this.array = value.list;
         this.location=value.city;
       });
+  const url2='https://api.openweathermap.org/data/2.5/weather?q='+this.city+',vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric';
+  this.http.get<IcurrentWeather>(url2)
+  .subscribe(vl2 =>{
+    this.currentWT=vl2;
+  })
+
   }
 }
 

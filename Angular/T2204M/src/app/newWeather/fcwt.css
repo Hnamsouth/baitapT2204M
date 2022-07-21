@@ -53,3 +53,9 @@
     top: 0;
     width: 100%
 }
+
+.wt {
+    background-image: url(./img/image.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

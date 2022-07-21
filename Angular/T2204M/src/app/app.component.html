@@ -1,6 +1,6 @@
 <!-- <ft-cpn></ft-cpn> -->
 <!--- index.html -->
-<!DOCTYPE html>
+<!--  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,27 @@
 <body>
     <section class="container-lg">
         <fc-wt></fc-wt>
+        cach 2
+         <app-forecast></app-forecast>
     </section>
 </body>
-
 </html>
+-->
+<div class="container-lg">
+    <nav>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#" routerLink="Fcwt">ForecastWT</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#" routerLink="CRwt">CurrentWT</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#" routerLink="login">Login</a> </li>
+                <button type="button" routerLink="test">test</button>
+            </ul>
+        </nav>
+    </nav>
+    <main class="d-flex" style="min-height: 400px;">
+        <article class="col">
+            <router-outlet></router-outlet>
+        </article>
+        <!-- <aside class="col-md-3 bg-secondary"> </aside> -->
+    </main>
+</div>

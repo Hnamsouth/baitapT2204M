@@ -16,8 +16,10 @@ const routes: Routes = [
   // {path:'login/rgt2', redirectTo:'rgt2' , pathMatch:'full'},
   // {path:'',redirectTo:'login',pathMatch:'full'},
   // {path:'rgt2/login', redirectTo:'login' , pathMatch:'full'},
-  {path:'ct1',component:Cnt1},
-  {path:'ct2',component:Cnt2}
+  {path:'ct0',component:Cnt2},
+  {path:'ct2',component:Cnt1},
+  {path:'',redirectTo:'ct1',pathMatch:'full'},
+  // {path:'cgr2/ct2',redirectTo:'ct2',pathMatch:'full'}
 ];
 
 @NgModule({

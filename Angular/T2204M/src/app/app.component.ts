@@ -12,11 +12,12 @@ import { ClassCPN } from './practiceclass/weather';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  rtl=[];
   title = 'T2204M';
   ar=["sadasd",3,34,34]
   data:data1[]|undefined;
-  cnt1:Food[]|undefined;
-  cnt2:Food[]|undefined;
+  // cnt1:Food[]|undefined;
+  // cnt2:Food[]|undefined;
   // cnt3:IScnt|undefined;
 
   constructor (private http:HttpClient){
@@ -26,18 +27,18 @@ export class AppComponent {
       this.data=value.data
       // console.log(this.data);
     })
-    const cnt1= 'https://foodgroup.herokuapp.com/api/today-special';
-    this.http.get<IScnt>(cnt1)
-    .subscribe(vl1 =>{
-      this.cnt1=vl1.data;
-      // console.log(this.cnt1);
-    })
-    const cnt2= 'https://foodgroup.herokuapp.com/api/category/1';
-    this.http.get<IScnt2>(cnt2)
-    .subscribe(vl2 =>{
-      this.cnt2=vl2.data.foods;
-      console.log(this.cnt2);
-    })
+    // const cnt1= 'https://foodgroup.herokuapp.com/api/today-special';
+    // this.http.get<IScnt>(cnt1)
+    // .subscribe(vl1 =>{
+    //   this.cnt1=vl1.data;
+    //   // console.log(this.cnt1);
+    // })
+    // const cnt2= 'https://foodgroup.herokuapp.com/api/category/1';
+    // this.http.get<IScnt2>(cnt2)
+    // .subscribe(vl2 =>{
+    //   this.cnt2=vl2.data.foods;
+    //   console.log(this.cnt2);
+    // })
     // const cnt3= 'https://foodgroup.herokuapp.com/api/today-special';
     // this.http.get<IScnt>(cnt3)
     // .subscribe(vl1 =>{

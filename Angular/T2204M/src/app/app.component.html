@@ -20,7 +20,7 @@
 </body>
 </html>
 -->
-<div class="container-lg">
+<!-- <div class="container-lg">
     <nav>
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <ul class="navbar-nav">
@@ -35,6 +35,75 @@
         <article class="col">
             <router-outlet></router-outlet>
         </article>
-        <!-- <aside class="col-md-3 bg-secondary"> </aside> -->
+
     </main>
+</div> -->
+<div class="row">
+
+    <ul class="nav nav-pills flex-column mb-auto col-3">
+        <h1>Category</h1>
+
+        <agl-app class="" *ngFor="let i of data;let j=index" [bars]="i"></agl-app>
+    </ul>
+    <div class="col row">
+        <cnt-agl class="col-3" *ngFor="let i of cnt1" [agl]="i"></cnt-agl>
+    </div>
+    <router-outlet></router-outlet>
 </div>
+<cnt2-agl class="col-3" *ngFor="let i of cnt2" [cnagl2]="i"></cnt2-agl>
+<!-- <main class="d-flex flex-nowrap">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center my-3 mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">LOGO HERE</span>
+        </a>
+        <div class="container my-3"></div>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link dropdown-toggle" id="dropdown" data-bs-toggle="dropdown" aria-current="page">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg> Cat1
+
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-dark dropdown-toggle">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg> Cat2
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/ppcat2.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>username here</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">User Informations</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Report a Bug</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-sm d-flex">
+        <div class="row">
+            <div class="col-3">
+                <img src="images/ppcat2.png">
+            </div>
+            <div class="col-3">
+                <img src="images/ppcat2.png">
+            </div>
+            <div class="col-3">
+                <img src="images/ppcat2.png">
+            </div>
+            <div class="col-3">
+                <img src="images/ppcat2.png">
+            </div>
+            <div class="col-3">
+                <img src="images/ppcat2.png">
+            </div>
+</div>
+</div>
+</main> -->

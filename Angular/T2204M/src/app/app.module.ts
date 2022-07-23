@@ -13,6 +13,10 @@ import { homeCPN } from './component/home';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { LoginCPN } from './formLoginRGT/login';
 import { registerCPN } from './formLoginRGT/RGT';
+import { AGLcpn } from './AGL/AGL';
+import { Cnt1 } from './AGL/cnt1';
+import { Cnt2 } from './AGL/cnt2';
+import { mtagl } from './AGL/mtAGL';
 
 const router:Routes=[
   {path:'rgt2',component:registerCPN}
@@ -26,7 +30,11 @@ const router:Routes=[
     ClassCPN,
     homeCPN,
     LoginCPN,
-    registerCPN
+    registerCPN,
+    AGLcpn,
+    Cnt1,
+    Cnt2,
+    mtagl
 
   ],
   imports: [

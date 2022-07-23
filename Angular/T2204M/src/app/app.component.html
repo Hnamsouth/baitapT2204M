@@ -1,6 +1,5 @@
-<!-- <ft-cpn></ft-cpn> -->
-<!--- index.html -->
-<!--  <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -12,42 +11,39 @@
 </head>
 
 <body>
-    <section class="container-lg">
+    <!-- <section class="container-lg">
         <fc-wt></fc-wt>
         cach 2
-         <app-forecast></app-forecast>
-    </section>
-</body>
-</html>
--->
-<!-- <div class="container-lg">
-    <nav>
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#" routerLink="Fcwt">ForecastWT</a> </li>
-                <li class="nav-item"><a class="nav-link" href="#" routerLink="CRwt">CurrentWT</a> </li>
-                <li class="nav-item"><a class="nav-link" href="#" routerLink="login">Login</a> </li>
-                <button type="button" routerLink="test">test</button>
-            </ul>
-        </nav>
-    </nav>
-    <main class="d-flex" style="min-height: 400px;">
-        <article class="col">
-            <router-outlet></router-outlet>
-        </article>
-
-    </main>
-</div> -->
-
-<div class="row">
-    <div class="col-2" id="prod-cl">
-        <h1>Category</h1>
-        <div *ngFor="let i of data;let j=index" routerLink="cgr{{j}}">
-            <a routerLink="ct{{j}}">{{i.name}}</a>
+        <app-forecast></app-forecast>
+    </section> -->
+    <div class="container-lg">
+        <!-- <nav>
+          <nav class="navbar navbar-expand navbar-dark bg-dark">
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="#" routerLink="Fcwt">ForecastWT</a> </li>
+                  <li class="nav-item"><a class="nav-link" href="#" routerLink="CRwt">CurrentWT</a> </li>
+                  <li class="nav-item"><a class="nav-link" href="#" routerLink="login">Login</a> </li>
+                  <button type="button" routerLink="test">test</button>
+              </ul>
+          </nav>
+      </nav>
+      <main class="d-flex" style="min-height: 400px;">
+          <article class="col">
+              <router-outlet></router-outlet>
+          </article>
+      </main> -->
+        <div class="row">
+            <div class="col-2" id="prod-cl">
+                <h1>Category</h1>
+                <div *ngFor="let i of data;let j=index" routerLink="cgr{{j}}">
+                    <a routerLink="ct{{j}}">{{i.name}}</a>
+                </div>
+            </div>
+            <main class="col">
+                <router-outlet></router-outlet>
+            </main>
         </div>
     </div>
-    <main class="col">
-        <router-outlet></router-outlet>
-    </main>
+</body>
 
-</div>
+</html>

@@ -1,5 +1,11 @@
+cnt-agl,
+cnt2-agl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 body {
-    background: #d2d2d2;
+    background: #d2d2d2 !important;
 }
 
 .items-cnt {
@@ -105,9 +111,9 @@ body {
     margin-right: 10px;
 }
 
-.col-3 {
+.col-agl {
     flex: 0 0 auto;
-    width: 29%;
+    width: 30%;
 }
 
 .col-us {

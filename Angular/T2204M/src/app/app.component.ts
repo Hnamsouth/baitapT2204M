@@ -1,15 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Cnt2 } from './AGL/cnt2';
 import { data1, IScategory } from './interface/AGL';
-import { Datum, IScnt } from './interface/AGLcnt';
-import { Food, IScnt2 } from './interface/AGLcnt2';
-import { ClassCPN } from './practiceclass/weather';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css','../assets/agl1.css']
 })
 export class AppComponent {
   rtl=[];
@@ -23,6 +18,5 @@ export class AppComponent {
       this.data=value.data
       // console.log(this.data);
     })
-
  }
 }

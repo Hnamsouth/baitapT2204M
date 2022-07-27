@@ -18,5 +18,5 @@ export class AppComponent {
       this.data=value.data
       // console.log(this.data);
     })
- }
+  }
 }
